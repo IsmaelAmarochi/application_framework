@@ -30,9 +30,14 @@ public class LoginController {
     RoleRepository roleRepository;
 
     @GetMapping("/login")
-    public String login() {
+    public String loginGet() {
         GlobalData.cart.clear();
-        return "/login";
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String loginPost() {
+        return "login";
     }
 
     @GetMapping("/register")

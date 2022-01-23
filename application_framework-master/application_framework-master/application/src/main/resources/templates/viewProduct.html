@@ -17,9 +17,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img th:src="@{/images/logo.png}" src="../static/images/logo.png" width="auto" height="40"
-                 class="d-inline-block align-top" alt=""/>
+        <a class="navbar-brand" th:href="@{/}">
+            PetFood&CO.
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +65,7 @@
                 <spna th:text="${product.weight}"></spna> grams.
             </h5>
             <p th:text="${product.description}"></p>
-            <a href="" th:href="@{/addToCart/{id}(id = ${product.id})}" class="btn btn-primary">Add to cart</a>
+            <a href="" th:href="@{/addToCart/{id}(id = ${product.id})}" class="btn btn-secondary">Add to cart</a>
         </div>
     </div>
 </div>

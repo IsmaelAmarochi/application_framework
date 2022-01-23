@@ -17,8 +17,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
+        <a class="navbar-brand" th:href="@{/}">
+            PetFood&CO.
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -101,7 +101,7 @@
                             </div>
                             <hr class="mb-4">
 
-                            <p class="text-primary mb-0"><i class="fas fa-info-circle mr-1"></i> Do not delay the purchase, adding
+                            <p class="text-secondary mb-0"><i class="fas fa-info-circle mr-1"></i> Do not delay the purchase, adding
                                 items to your cart does not mean booking them.</p>
 
                         </div>
@@ -142,7 +142,7 @@
                                 </li>
                             </ul>
 
-                            <a th:href="@{/checkout}" h class="btn btn-primary btn-block waves-effect waves-light">go to
+                            <a th:href="@{/checkout}" h class="btn btn-secondary btn-block waves-effect waves-light">Go to
                                 checkout</a>
 
                         </div>
@@ -153,7 +153,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
 
-                            <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
+                            <a class="dark-grey-text d-flex justify-content-between text-secondary" data-toggle="collapse" href="#collapseExample"
                                aria-expanded="false" aria-controls="collapseExample">
                                 Add a discount code (optional)
                                 <span><i class="fas fa-chevron-down pt-1"></i></span>
