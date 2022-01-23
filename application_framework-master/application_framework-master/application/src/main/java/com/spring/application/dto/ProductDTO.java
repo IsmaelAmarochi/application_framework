@@ -8,6 +8,8 @@ import javax.persistence.*;
 @Data
 public class ProductDTO {
 
+    //Product Data Transfer Object
+
     private Long id;
 
     private String name;

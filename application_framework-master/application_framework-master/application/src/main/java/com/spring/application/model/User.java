@@ -13,6 +13,9 @@ import java.util.List;
 @Table(name = "users")
 public class User {
 
+    //User entity class
+
+    //Id is generated automatically
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

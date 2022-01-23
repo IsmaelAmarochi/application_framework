@@ -17,6 +17,8 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+//Data seeder, this seeder is not used
+//DB is seeded by the data.sql file
 @Component
 public class DataSeeder implements CommandLineRunner {
     private UserRepository userRepository;

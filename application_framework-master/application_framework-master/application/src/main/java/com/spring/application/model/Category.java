@@ -7,6 +7,9 @@ import javax.persistence.*;
 @Data
 public class Category {
 
+    //Category entity
+
+    //Id is generated automatically
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "category_id")

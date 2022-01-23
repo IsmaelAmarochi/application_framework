@@ -7,6 +7,9 @@ import java.util.List;
 
 public class GlobalData {
 
+    //Global data variable, used for the cart
+    //Using this variable, we can easily access the elements in the cart
+
     public  static List<Product> cart;
 
     static {

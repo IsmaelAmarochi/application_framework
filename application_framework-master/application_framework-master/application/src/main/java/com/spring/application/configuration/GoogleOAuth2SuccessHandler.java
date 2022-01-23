@@ -23,6 +23,8 @@ import java.util.List;
 @Component
 public class GoogleOAuth2SuccessHandler implements AuthenticationSuccessHandler {
 
+    //Class to enable the user to connect via GOOGLE OAuth System
+
     @Autowired
     RoleRepository roleRepository;
 
@@ -31,14 +33,18 @@ public class GoogleOAuth2SuccessHandler implements AuthenticationSuccessHandler 
 
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
+
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
                                         Authentication authentication) throws IOException, ServletException {
         OAuth2AuthenticationToken token = (OAuth2AuthenticationToken) authentication;
         String email = token.getPrincipal().getAttributes().get("email").toString();
+
+        //Check if user exists in current database
         if (userRepository.findUserByEmail(email).isPresent()) {
 
         } else {
+            // Create user if he/she is not present in DB
             User user = new User();
             user.setFirstName(token.getPrincipal().getAttributes().get("given_name").toString());
             user.setLastName(token.getPrincipal().getAttributes().get("family_name").toString());
@@ -48,6 +54,7 @@ public class GoogleOAuth2SuccessHandler implements AuthenticationSuccessHandler 
             user.setRoles(roles);
             userRepository.save(user);
         }
+        //Redirect to home "/" after the authentication
         redirectStrategy.sendRedirect(httpServletRequest, httpServletResponse, "/");
     }
 
